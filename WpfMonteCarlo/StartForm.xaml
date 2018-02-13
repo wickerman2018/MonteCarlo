@@ -1,0 +1,10 @@
+﻿<Window x:Class="WpfChordMethod.StartForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Введіть прізвище студента ..." Height="153" Width="279" ResizeMode="NoResize">
+    <Grid Height="127" Width="268">
+        <TextBox Margin="27,62,27,42" Name="tbPIB" />
+        <Label Margin="50,29,53,0" Name="label1" Height="27" VerticalAlignment="Top">Введіть П. І. Б.  студента</Label>
+        <Button Height="23" Margin="97,0,97,13" Name="btnOk" VerticalAlignment="Bottom" Click="btnOk_Click">OK</Button>
+    </Grid>
+</Window>

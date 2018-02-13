@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfChordMethod.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Обчислення інтегралу методом Монте-Карло" Height="404" Width="447" ResizeMode="NoResize" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Grid Height="352" Width="416">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="205*" />
+            <ColumnDefinition Width="16*" />
+            <ColumnDefinition Width="110*" />
+            <ColumnDefinition Width="36.398*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="170*" />
+            <RowDefinition Height="19*" />
+        </Grid.RowDefinitions>
+        <Button Height="23" HorizontalAlignment="Left" Name="btnOpen" VerticalAlignment="Top" Width="75" Click="btnOpen_Click">Відкрити</Button>
+        <Button Height="23" Margin="75,0,82,0" Name="btnSave" VerticalAlignment="Top" Click="btnSave_Click">Зберегти</Button>
+        <Button Height="23" Name="btnCalc" VerticalAlignment="Top" Click="btnCalc_Click" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="98.117">Обчислити</Button>
+        <Button Height="23" Name="btnExit" VerticalAlignment="Top" Click="btnExit_Click" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="74">Вихід</Button>
+        <TextBox Height="23" Margin="12,118,0,0" Name="textA" VerticalAlignment="Top" HorizontalAlignment="Left" Width="56" PreviewTextInput="textA_PreviewTextInput" />
+        <TextBox Height="23" Margin="0,118,24,0" Name="textB" VerticalAlignment="Top" PreviewTextInput="textA_PreviewTextInput" HorizontalAlignment="Right" Width="56" />
+        <TextBox Height="23" Margin="8.689,118,45.491,0" Name="textC" VerticalAlignment="Top" PreviewTextInput="textA_PreviewTextInput" Grid.Column="2" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,89,0,0" Name="labA" VerticalAlignment="Top" Width="48">A</Label>
+        <Label Height="28" Margin="0,89,32,0" Name="labB" VerticalAlignment="Top" HorizontalAlignment="Right" Width="48">B</Label>
+        <Label Height="28" Margin="7.689,89,54.491,0" Name="labC" VerticalAlignment="Top" Grid.Column="2">C</Label>
+        <ListBox Margin="12,0" Name="listBoxResult" Grid.RowSpan="2" Height="127" VerticalAlignment="Bottom" Grid.ColumnSpan="4" />
+        <Label Margin="109,147,53.542,142" Name="labTitle" Grid.ColumnSpan="3">Границі інтегрування</Label>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,0,0,101" Name="textX" VerticalAlignment="Bottom" Width="56" PreviewTextInput="textA_PreviewTextInput" />
+        <TextBox Height="23" Margin="0,0,24,101" Name="textY" VerticalAlignment="Bottom" PreviewTextInput="textA_PreviewTextInput" HorizontalAlignment="Right" Width="56" />
+        <TextBox Height="23" Margin="8.638,0,45.542,101" Name="textZ" VerticalAlignment="Bottom" PreviewTextInput="textA_PreviewTextInput" Grid.Column="2" />
+        <Label HorizontalAlignment="Left" Margin="12,0,0,114" Name="labX" Width="48" Height="35.614" VerticalAlignment="Bottom">X</Label>
+        <Label Margin="0,0,32,122" Name="labY" HorizontalAlignment="Right" Width="48" Height="27.614" VerticalAlignment="Bottom">Y</Label>
+        <Label Margin="8.689,0,53.491,122" Name="labZ" Grid.Column="2" Height="27.614" VerticalAlignment="Bottom">Z</Label>
+        <Button Height="23" Margin="0,0,29,0" Name="btnFunk" VerticalAlignment="Top" Grid.Column="2" Click="btnFunk_Click">Вибір функції</Button>
+        <Label Height="27.614" Margin="109.051,74,53.491,0" Name="label1" VerticalAlignment="Top" Grid.ColumnSpan="3">Коефіцієнти функції</Label>
+        <ComboBox Height="23" Margin="60,45,29,0" Name="cbFunk" VerticalAlignment="Top" Grid.ColumnSpan="3" Visibility="Visible" SelectionChanged="cbFunk_SelectionChanged" Text="A^3+B^2+C">
+            <ComboBoxItem>A*Sin (B)+C</ComboBoxItem>
+            <ComboBoxItem>A*Ln(B)+C</ComboBoxItem>
+            <ComboBoxItem>A^3+B^2+C</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>
